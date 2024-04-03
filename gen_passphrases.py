@@ -7,7 +7,7 @@ electronic diceware."""
 
 from optparse import OptionParser
 
-import diceware
+from . import diceware
 
 
 BASIC=0
@@ -42,7 +42,7 @@ def gen_passphrases(style, count):
     elif style == XP_LOGIN:
         generator = diceware.SpecialGenerator(count=4)
 
-    result = [generator.next() for i in range(count)]
+    result = [next(generator) for i in range(count)]
     return result
 
 
@@ -75,5 +75,5 @@ if __name__ == '__main__':
     (options, args) = parser.parse_args()
     passphrases = gen_passphrases(options.style, int(options.count))
     for passphrase in passphrases:
-        print passphrase
+        print(passphrase)
         

@@ -89,11 +89,11 @@ class Generator(object):
             theResult += theRoll
         return theResult
 
-    def next(self):
+    def __next__(self):
         """Generate the next passphrase."""
-        theResult = self._stream.next()
+        theResult = next(self._stream)
         while(len(theResult) < self._minSize):
-            theResult = self._stream.next()
+            theResult = next(self._stream)
         return theResult
     
     def stream(self):
@@ -129,7 +129,7 @@ class LoginGenerator(Generator):
             theResult.append(theSpecialChar)
         return theResult
     
-    def next(self):
+    def __next__(self):
         """Calculate the next password."""
         while True:
             theRawList = super(LoginGenerator, self).next().split()
@@ -174,9 +174,9 @@ class SpecialGenerator(Generator):
                     break
         return theResult
         
-    def next(self):
+    def __next__(self):
         """Calculate the next passphrase."""
-        theRawPassphrase = super(SpecialGenerator, self).next()
+        theRawPassphrase = next(super(SpecialGenerator, self))
         theResult = self.insertSpecial(theRawPassphrase)
         return theResult
 

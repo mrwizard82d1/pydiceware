@@ -6,7 +6,7 @@
 
 import wx
 
-import diceware
+from . import diceware
 
 
 class SplitSecretFrame(wx.Frame):

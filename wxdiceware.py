@@ -6,7 +6,7 @@
 
 import wx
 
-import diceware
+from . import diceware
 
 
 class DicewareFrame(wx.Frame):
@@ -54,7 +54,7 @@ class DicewareFrame(wx.Frame):
         
         self.paramsBox = wx.StaticBox(self.view, -1, 'Parameters')
 
-        choices = self.styleHandler.keys()
+        choices = list(self.styleHandler.keys())
         choices.sort()
         self.styles = wx.RadioBox(self.view, -1, '', choices=choices,
                                   style=wx.RA_SPECIFY_ROWS)
@@ -152,7 +152,7 @@ class DicewareFrame(wx.Frame):
         for i in range(self.countSpinner.GetValue()):
             if len(self.generatedText.GetValue()) > 0:
                 self.generatedText.AppendText('\n')
-            self.generatedText.AppendText('%s' % self.generator.next())
+            self.generatedText.AppendText('%s' % next(self.generator))
         
 
 if __name__ == '__main__':

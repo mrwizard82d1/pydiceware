@@ -10,7 +10,7 @@ Application (filter) for splitting secrets into count shares.
 from optparse import OptionParser
 import sys
 
-import diceware
+from . import diceware
 
 
 def split_secret(secret, count):
@@ -50,6 +50,6 @@ if __name__ == '__main__':
     for secret in secrets:
         shares = split_secret(secret, int(options.count))
         for share in shares:
-            print share,
-        print
+            print(share, end=' ')
+        print()
         

@@ -10,7 +10,7 @@ Application (filter) for reconstructing secrets from shares.
 from optparse import OptionParser
 import sys
 
-import diceware
+from . import diceware
 
 
 def reconstruct_secret(shares):
@@ -48,7 +48,7 @@ if __name__ == '__main__':
     for secretShares in secretsShares:
         shares = secretShares.split()
         secret = reconstruct_secret(shares)
-        print secret
+        print(secret)
         
             
 
