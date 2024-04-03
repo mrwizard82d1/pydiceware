@@ -12,7 +12,7 @@ text-oriented, interactive commander user interface.
 import cmd
 import pprint
 
-from . import diceware
+import diceware
 
 
 def printPassphrases(generator, count):
