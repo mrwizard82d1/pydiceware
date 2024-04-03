@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="37fe021d-a2c2-4663-b74e-2289191dc4bf" name="Changes" comment="" />
+    <list default="true" id="37fe021d-a2c2-4663-b74e-2289191dc4bf" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/cmddiceware.py" beforeDir="false" afterPath="$PROJECT_DIR$/cmddiceware.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/diceware.py" beforeDir="false" afterPath="$PROJECT_DIR$/diceware.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +59,7 @@
       <updated>1712163069739</updated>
       <workItem from="1712163070899" duration="19000" />
       <workItem from="1712163094335" duration="2524000" />
-      <workItem from="1712166481455" duration="2060000" />
+      <workItem from="1712166481455" duration="2339000" />
     </task>
     <servers />
   </component>
