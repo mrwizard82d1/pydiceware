@@ -55,9 +55,9 @@ class PhraseList(object):
             for theTop, theDirnames, theFilenames in theWalker:
                 if theFilename in theFilenames:
                     thePath = os.path.join(theTop, theFilename)
-                    return file(thePath)
+                    return open(thePath)
 
-        return file(theFilename)
+        return open(theFilename)
 
     def getPhrase(self, index):
         actualIndex = index
@@ -132,7 +132,7 @@ class LoginGenerator(Generator):
     def __next__(self):
         """Calculate the next password."""
         while True:
-            theRawList = super(LoginGenerator, self).next().split()
+            theRawList = super(LoginGenerator, self).__next__().split()
             theSpecialChars = self.generateSpecialChars(len(theRawList) - 1)
             thePhraseList = [theRawList[0]]
             for i in range(len(theSpecialChars)):
